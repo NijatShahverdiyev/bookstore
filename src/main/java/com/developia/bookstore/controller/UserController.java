@@ -1,6 +1,7 @@
 package com.developia.bookstore.controller;
 
 import com.developia.bookstore.model.User;
+import com.developia.bookstore.model.UserDto;
 import com.developia.bookstore.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,8 +25,8 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public void login(@ModelAttribute User user){
-        userService.login(user);
+    public void login(@ModelAttribute UserDto userDto){
+        userService.login(userDto);
 
     }
 }
